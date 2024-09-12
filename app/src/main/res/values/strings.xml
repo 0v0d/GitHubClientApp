@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GitHubClientApp</string>
+    <string name="input_screen_title">検索画面</string>
+    <string name="list_screen_title">結果リスト画面</string>
+    <string name="detail_screen_title">詳細画面</string>
+    <string name="searchInputText_hint">GitHub のリポジトリを検索</string>
+    <string name="error_message">No repositories found</string>
+</resources>
