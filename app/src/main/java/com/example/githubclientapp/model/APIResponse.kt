@@ -1,15 +1,15 @@
 package com.example.githubclientapp.model
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
-@Parcelize
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class APIGitHubResponse(
     @SerializedName("items")
     val items: List<APIRepositoryItem>
-) : Parcelable
+)
 
-@Parcelize
+@Serializable
 data class APIRepositoryItem(
     @SerializedName("id")
     val id: Long,
@@ -33,9 +33,9 @@ data class APIRepositoryItem(
     val forksCount: Int,
     @SerializedName("open_issues_count")
     val openIssuesCount: Int
-) : Parcelable
+)
 
-@Parcelize
+@Serializable
 data class APIOwnerItem(
     @SerializedName("login")
     val login: String,
@@ -43,7 +43,7 @@ data class APIOwnerItem(
     val avatarUrl: String,
     @SerializedName("html_url")
     val htmlUrl: String
-) : Parcelable
+)
 
 fun APIRepositoryItem.toDomainModel() = RepositoryItem(
     id = id,
