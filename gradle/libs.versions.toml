@@ -1,9 +1,19 @@
 [versions]
-activityCompose = "1.9.2"
-agp = "8.7.0-beta01"
+# SDK Versions
+compileSdk = "35"
+minSdk = "24"
+targetSdk = "35"
+
+# JVM Versions
+java = "1.8"
+kotlin-jvm = "1.8"
+
+# Dependencies Versions
+activityCompose = "1.9.3"
+agp = "8.7.3"
 coil = "2.7.0"
-composeBom = "2024.09.01"
-coreKtx = "1.13.1"
+composeBom = "2024.12.01"
+coreKtx = "1.15.0"
 detekt = "1.23.7"
 detektFormatting = "1.23.7"
 detektVersion = "0.4.12"
@@ -14,15 +24,16 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 koin = "4.0.0-RC2"
 koinAndroidxCompose = "3.5.6"
-kotlin = "2.0.20"
+kotlin = "2.0.21"
 ktor = "2.3.7"
-kotlinxSerializationJson = "1.7.2"
+kotlinxSerializationJson = "1.7.3"
 leakcanary = "2.14"
-lifecycleRuntimeKtx = "2.8.5"
-navigation = "2.8.0"
-uiTestManifest = "1.7.1"
-uiTooling = "1.7.1"
+lifecycleRuntimeKtx = "2.8.7"
+navigation = "2.8.5"
+uiTestManifest = "1.7.6"
 twitterDetekt = "0.0.26"
+appcompat = "1.7.0"
+material = "1.12.0"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -36,7 +47,6 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
-androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
@@ -60,6 +70,8 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 # Android Test
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -67,3 +79,4 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
