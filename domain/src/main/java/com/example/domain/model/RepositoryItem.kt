@@ -5,7 +5,7 @@ import com.example.data.model.APIRepositoryItem
 import kotlinx.serialization.Serializable
 
 
-@kotlinx.serialization.Serializable
+@Serializable
 data class RepositoryItem(
     val id: Long,
     val name: String,

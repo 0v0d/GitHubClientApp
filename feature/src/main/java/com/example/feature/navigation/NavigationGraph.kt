@@ -14,7 +14,6 @@ import com.example.feature.screen.DetailScreen
 import com.example.feature.screen.InputScreen
 import com.example.feature.screen.RepositoryListScreen
 import com.example.feature.utils.JsonUtils
-import com.google.gson.Gson
 
 @Composable
 fun NavigationGraph(
